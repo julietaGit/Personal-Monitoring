@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Job Lists</h1>
+
+<div class="media"> 
+  <div class="media-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Interviewer</th>
+          <th>Interview</th>
+          <th>Test</th>
+          <th>Date</th>
+          <th>Result</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @joblists.each do |joblist| %>
+          <tr>
+            <td><%= joblist.company %></td>
+            <td><%= joblist.interviewer %></td>
+            <td><%= joblist.interview %></td>
+            <td><%= joblist.test %></td>
+            <td><%= joblist.date.strftime("%Y/%m/%d") %></td>
+            <td><%= joblist.result %></td>
+            <td><%= link_to 'Show', joblist, class: "btn btn-default" %></td>
+            <td><%= link_to 'Edit', edit_joblist_path(joblist), class: 'btn btn-mini btn-success' %></td>
+            <td><%= link_to 'Destroy', joblist, method: :delete, class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'New Joblist', new_joblist_path %>

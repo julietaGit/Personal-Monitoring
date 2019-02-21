@@ -1,0 +1,35 @@
+ <div class="jumbotron text-center">
+  <h1>Personal Monitoring</h1>
+  <p>You can register to use my monitoring web application</p>
+  <form class="form-inline">
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div> 
+<div class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2>
+  <h4>What I have created using RUBY ON RAILS</h4>
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <%= image_tag("newyork.jpg") %>
+        <p><strong>Personal Monitoring</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <%= link_to image_tag("paris.jpg"), "http://bantayanisland.herokuapp.com/" %>
+        <p><strong>Bantayan Island Blog</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+      	<%= image_tag("sanfran.jpg") %>
+        <p><strong>e-Learning</strong></p>
+      </div>
+    </div>
+</div>

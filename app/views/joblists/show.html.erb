@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @joblist.company %>
+</p>
+
+<p>
+  <strong>Interviewer:</strong>
+  <%= @joblist.interviewer %>
+</p>
+
+<p>
+  <strong>Interview:</strong>
+  <%= @joblist.interview %>
+</p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @joblist.test %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @joblist.date %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @joblist.result %>
+</p>
+
+<%= link_to 'Edit', edit_joblist_path(@joblist) %> |
+<%= link_to 'Back', joblists_path %>

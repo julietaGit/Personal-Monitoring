@@ -1,0 +1,47 @@
+<%= form_with(model: joblist, local: true) do |form| %>
+  <% if joblist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(joblist.errors.count, "error") %> prohibited this joblist from being saved:</h2>
+
+      <ul>
+      <% joblist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interviewer %>
+    <%= form.text_field :interviewer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interview %>
+    <%= form.text_field :interview %>
+  </div>
+
+  <div class="field">
+    <%= form.label :test %>
+    <%= form.text_field :test %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :result %>
+    <%= form.text_field :result %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

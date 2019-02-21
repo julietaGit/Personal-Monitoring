@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Yourplan:</strong>
+  <%= @plan.yourplan %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @plan.place %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @plan.date %>
+</p>
+
+<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Back', plans_path %>
